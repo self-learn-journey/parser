@@ -1,0 +1,40 @@
+# Scala / SBT / Maven
+target/
+*.class
+*.log
+*.jar
+*.war
+*.ear
+
+# Maven
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# MacOS
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Eclipse
+.settings/
+.project
+.classpath
+
+# Others
+*.tmp
+*.bak
+*.swp
