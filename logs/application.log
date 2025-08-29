@@ -1,0 +1,564 @@
+2025-08-29T15:41:57.061-04:00  INFO 21644 --- [main] scala.App                                : Starting App using Java 17.0.16 with PID 21644 (/Users/tilakkumar/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar started by tilakkumar in /Users/tilakkumar/Desktop/Spark Learning/parser)
+2025-08-29T15:41:57.070-04:00  INFO 21644 --- [main] scala.App                                : No active profile set, falling back to 1 default profile: "default"
+2025-08-29T15:41:57.172-04:00  WARN 21644 --- [main] ionWarningsApplicationContextInitializer : 
+
+** WARNING ** : Your ApplicationContext is unlikely to start due to a @ComponentScan of the default package.
+
+
+2025-08-29T15:41:58.333-04:00  WARN 21644 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: URL [jar:file:/Users/tilakkumar/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.11/spring-boot-autoconfigure-3.3.11.jar!/org/springframework/boot/autoconfigure/jdbc/DataSourceAutoConfiguration$EmbeddedDatabaseConfiguration.class]
+2025-08-29T15:41:58.343-04:00  INFO 21644 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-29T15:41:58.363-04:00 ERROR 21644 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: URL [jar:file:/Users/tilakkumar/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.11/spring-boot-autoconfigure-3.3.11.jar!/org/springframework/boot/autoconfigure/jdbc/DataSourceAutoConfiguration$EmbeddedDatabaseConfiguration.class]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:510) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:351) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:320) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:260) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:196) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:417) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1364) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-3.3.11.jar:3.3.11]
+	at Parser$.delayedEndpoint$Parser$1(Parser.scala:9) ~[classes/:na]
+	at Parser$delayedInit$body.apply(Parser.scala:8) ~[classes/:na]
+	at scala.Function0.apply$mcV$sp(Function0.scala:39) ~[scala-library-2.12.10.jar:na]
+	at scala.Function0.apply$mcV$sp$(Function0.scala:39) ~[scala-library-2.12.10.jar:na]
+	at scala.runtime.AbstractFunction0.apply$mcV$sp(AbstractFunction0.scala:17) ~[scala-library-2.12.10.jar:na]
+	at scala.App.$anonfun$main$1$adapted(App.scala:80) ~[scala-library-2.12.10.jar:na]
+	at scala.collection.immutable.List.foreach(List.scala:392) ~[scala-library-2.12.10.jar:na]
+	at scala.App.main(App.scala:80) ~[scala-library-2.12.10.jar:na]
+	at scala.App.main$(App.scala:78) ~[scala-library-2.12.10.jar:na]
+	at Parser$.main(Parser.scala:8) ~[classes/:na]
+	at Parser.main(Parser.scala) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$EmbeddedDatabaseConfiguration due to org/springframework/dao/DataAccessException not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:54) ~[spring-boot-autoconfigure-3.3.11.jar:3.3.11]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:88) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:71) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isConditionMatch(ClassPathScanningCandidateComponentProvider.java:564) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isCandidateComponent(ClassPathScanningCandidateComponentProvider.java:547) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:471) ~[spring-context-6.1.19.jar:6.1.19]
+	... 30 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/dao/DataAccessException
+	at org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration$EmbeddedDatabaseCondition.getMatchOutcome(DataSourceAutoConfiguration.java:146) ~[spring-boot-autoconfigure-3.3.11.jar:3.3.11]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.3.11.jar:3.3.11]
+	... 36 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.dao.DataAccessException
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 38 common frames omitted
+
+2025-08-29T15:47:01.465-04:00  INFO 22823 --- [main] scala.App                                : Starting App using Java 17.0.16 with PID 22823 (/Users/tilakkumar/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar started by tilakkumar in /Users/tilakkumar/Desktop/Spark Learning/parser)
+2025-08-29T15:47:01.469-04:00  INFO 22823 --- [main] scala.App                                : No active profile set, falling back to 1 default profile: "default"
+2025-08-29T15:47:01.550-04:00  WARN 22823 --- [main] ionWarningsApplicationContextInitializer : 
+
+** WARNING ** : Your ApplicationContext is unlikely to start due to a @ComponentScan of the default package.
+
+
+2025-08-29T15:47:02.907-04:00  WARN 22823 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: URL [jar:file:/Users/tilakkumar/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.11/spring-boot-autoconfigure-3.3.11.jar!/org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration.class]
+2025-08-29T15:47:02.912-04:00  INFO 22823 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-29T15:47:02.928-04:00 ERROR 22823 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: URL [jar:file:/Users/tilakkumar/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.11/spring-boot-autoconfigure-3.3.11.jar!/org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration.class]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:510) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:351) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:320) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:260) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:196) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:417) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1364) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-3.3.11.jar:3.3.11]
+	at Parser$.delayedEndpoint$Parser$1(Parser.scala:9) ~[classes/:na]
+	at Parser$delayedInit$body.apply(Parser.scala:8) ~[classes/:na]
+	at scala.Function0.apply$mcV$sp(Function0.scala:39) ~[scala-library-2.12.10.jar:na]
+	at scala.Function0.apply$mcV$sp$(Function0.scala:39) ~[scala-library-2.12.10.jar:na]
+	at scala.runtime.AbstractFunction0.apply$mcV$sp(AbstractFunction0.scala:17) ~[scala-library-2.12.10.jar:na]
+	at scala.App.$anonfun$main$1$adapted(App.scala:80) ~[scala-library-2.12.10.jar:na]
+	at scala.collection.immutable.List.foreach(List.scala:392) ~[scala-library-2.12.10.jar:na]
+	at scala.App.main(App.scala:80) ~[scala-library-2.12.10.jar:na]
+	at scala.App.main$(App.scala:78) ~[scala-library-2.12.10.jar:na]
+	at Parser$.main(Parser.scala:8) ~[classes/:na]
+	at Parser.main(Parser.scala) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration due to io/r2dbc/spi/ValidationDepth not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:54) ~[spring-boot-autoconfigure-3.3.11.jar:3.3.11]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:88) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:71) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isConditionMatch(ClassPathScanningCandidateComponentProvider.java:564) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isCandidateComponent(ClassPathScanningCandidateComponentProvider.java:547) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:471) ~[spring-context-6.1.19.jar:6.1.19]
+	... 30 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: io/r2dbc/spi/ValidationDepth
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3297) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredField(Class.java:2608) ~[na:na]
+	at org.springframework.boot.context.properties.bind.DefaultBindConstructorProvider$Constructors.isInnerClass(DefaultBindConstructorProvider.java:144) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.DefaultBindConstructorProvider$Constructors.getCandidateConstructors(DefaultBindConstructorProvider.java:134) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.DefaultBindConstructorProvider$Constructors.getConstructors(DefaultBindConstructorProvider.java:103) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.DefaultBindConstructorProvider.getBindConstructor(DefaultBindConstructorProvider.java:42) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.ValueObjectBinder$ValueObject.get(ValueObjectBinder.java:213) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.ValueObjectBinder.bind(ValueObjectBinder.java:76) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindDataObject$6(Binder.java:480) ~[spring-boot-3.3.11.jar:3.3.11]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.AbstractList$RandomAccessSpliterator.tryAdvance(AbstractList.java:706) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647) ~[na:na]
+	at org.springframework.boot.context.properties.bind.Binder.fromDataObjectBinders(Binder.java:488) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindDataObject$7(Binder.java:479) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:597) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withDataObject(Binder.java:583) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bindDataObject(Binder.java:479) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:418) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:350) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:339) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:269) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:230) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.getMatchOutcome(ConnectionFactoryConfigurations.java:155) ~[spring-boot-autoconfigure-3.3.11.jar:3.3.11]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.3.11.jar:3.3.11]
+	... 36 common frames omitted
+Caused by: java.lang.ClassNotFoundException: io.r2dbc.spi.ValidationDepth
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 67 common frames omitted
+
+2025-08-29T15:50:54.231-04:00  INFO 23705 --- [main] scala.App                                : Starting App using Java 17.0.16 with PID 23705 (/Users/tilakkumar/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar started by tilakkumar in /Users/tilakkumar/Desktop/Spark Learning/parser)
+2025-08-29T15:50:54.234-04:00  INFO 23705 --- [main] scala.App                                : No active profile set, falling back to 1 default profile: "default"
+2025-08-29T15:50:54.328-04:00  WARN 23705 --- [main] ionWarningsApplicationContextInitializer : 
+
+** WARNING ** : Your ApplicationContext is unlikely to start due to a @ComponentScan of the default package.
+
+
+2025-08-29T15:50:55.809-04:00  WARN 23705 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: URL [jar:file:/Users/tilakkumar/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.11/spring-boot-autoconfigure-3.3.11.jar!/org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration.class]
+2025-08-29T15:50:55.831-04:00  INFO 23705 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-29T15:50:55.884-04:00 ERROR 23705 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: URL [jar:file:/Users/tilakkumar/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.11/spring-boot-autoconfigure-3.3.11.jar!/org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration.class]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:510) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:351) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:320) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:260) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:196) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:417) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1364) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-3.3.11.jar:3.3.11]
+	at Parser$.delayedEndpoint$Parser$1(Parser.scala:9) ~[classes/:na]
+	at Parser$delayedInit$body.apply(Parser.scala:8) ~[classes/:na]
+	at scala.Function0.apply$mcV$sp(Function0.scala:39) ~[scala-library-2.12.10.jar:na]
+	at scala.Function0.apply$mcV$sp$(Function0.scala:39) ~[scala-library-2.12.10.jar:na]
+	at scala.runtime.AbstractFunction0.apply$mcV$sp(AbstractFunction0.scala:17) ~[scala-library-2.12.10.jar:na]
+	at scala.App.$anonfun$main$1$adapted(App.scala:80) ~[scala-library-2.12.10.jar:na]
+	at scala.collection.immutable.List.foreach(List.scala:392) ~[scala-library-2.12.10.jar:na]
+	at scala.App.main(App.scala:80) ~[scala-library-2.12.10.jar:na]
+	at scala.App.main$(App.scala:78) ~[scala-library-2.12.10.jar:na]
+	at Parser$.main(Parser.scala:8) ~[classes/:na]
+	at Parser.main(Parser.scala) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration due to io/r2dbc/spi/ValidationDepth not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:54) ~[spring-boot-autoconfigure-3.3.11.jar:3.3.11]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:88) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:71) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isConditionMatch(ClassPathScanningCandidateComponentProvider.java:564) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isCandidateComponent(ClassPathScanningCandidateComponentProvider.java:547) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:471) ~[spring-context-6.1.19.jar:6.1.19]
+	... 30 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: io/r2dbc/spi/ValidationDepth
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3297) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredField(Class.java:2608) ~[na:na]
+	at org.springframework.boot.context.properties.bind.DefaultBindConstructorProvider$Constructors.isInnerClass(DefaultBindConstructorProvider.java:144) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.DefaultBindConstructorProvider$Constructors.getCandidateConstructors(DefaultBindConstructorProvider.java:134) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.DefaultBindConstructorProvider$Constructors.getConstructors(DefaultBindConstructorProvider.java:103) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.DefaultBindConstructorProvider.getBindConstructor(DefaultBindConstructorProvider.java:42) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.ValueObjectBinder$ValueObject.get(ValueObjectBinder.java:213) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.ValueObjectBinder.bind(ValueObjectBinder.java:76) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindDataObject$6(Binder.java:480) ~[spring-boot-3.3.11.jar:3.3.11]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.AbstractList$RandomAccessSpliterator.tryAdvance(AbstractList.java:706) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647) ~[na:na]
+	at org.springframework.boot.context.properties.bind.Binder.fromDataObjectBinders(Binder.java:488) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindDataObject$7(Binder.java:479) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:597) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withDataObject(Binder.java:583) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bindDataObject(Binder.java:479) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:418) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:350) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:339) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:269) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:230) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.getMatchOutcome(ConnectionFactoryConfigurations.java:155) ~[spring-boot-autoconfigure-3.3.11.jar:3.3.11]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.3.11.jar:3.3.11]
+	... 36 common frames omitted
+Caused by: java.lang.ClassNotFoundException: io.r2dbc.spi.ValidationDepth
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 67 common frames omitted
+
+2025-08-29T15:58:31.869-04:00  INFO 25440 --- [main] scala.App                                : Starting App using Java 17.0.16 with PID 25440 (/Users/tilakkumar/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar started by tilakkumar in /Users/tilakkumar/Desktop/Spark Learning/parser)
+2025-08-29T15:58:31.872-04:00  INFO 25440 --- [main] scala.App                                : No active profile set, falling back to 1 default profile: "default"
+2025-08-29T15:58:31.948-04:00  WARN 25440 --- [main] ionWarningsApplicationContextInitializer : 
+
+** WARNING ** : Your ApplicationContext is unlikely to start due to a @ComponentScan of the default package.
+
+
+2025-08-29T15:58:33.233-04:00  WARN 25440 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: URL [jar:file:/Users/tilakkumar/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.11/spring-boot-autoconfigure-3.3.11.jar!/org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration.class]
+2025-08-29T15:58:33.239-04:00  INFO 25440 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-29T15:58:33.258-04:00 ERROR 25440 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to read candidate component class: URL [jar:file:/Users/tilakkumar/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.3.11/spring-boot-autoconfigure-3.3.11.jar!/org/springframework/boot/autoconfigure/r2dbc/ConnectionFactoryConfigurations$PoolConfiguration.class]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:510) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.findCandidateComponents(ClassPathScanningCandidateComponentProvider.java:351) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathBeanDefinitionScanner.doScan(ClassPathBeanDefinitionScanner.java:277) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ComponentScanAnnotationParser.parse(ComponentScanAnnotationParser.java:128) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:320) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:260) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:196) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:165) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:417) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:290) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:789) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:607) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:755) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1364) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1353) ~[spring-boot-3.3.11.jar:3.3.11]
+	at Parser$.delayedEndpoint$Parser$1(Parser.scala:9) ~[classes/:na]
+	at Parser$delayedInit$body.apply(Parser.scala:8) ~[classes/:na]
+	at scala.Function0.apply$mcV$sp(Function0.scala:39) ~[scala-library-2.12.10.jar:na]
+	at scala.Function0.apply$mcV$sp$(Function0.scala:39) ~[scala-library-2.12.10.jar:na]
+	at scala.runtime.AbstractFunction0.apply$mcV$sp(AbstractFunction0.scala:17) ~[scala-library-2.12.10.jar:na]
+	at scala.App.$anonfun$main$1$adapted(App.scala:80) ~[scala-library-2.12.10.jar:na]
+	at scala.collection.immutable.List.foreach(List.scala:392) ~[scala-library-2.12.10.jar:na]
+	at scala.App.main(App.scala:80) ~[scala-library-2.12.10.jar:na]
+	at scala.App.main$(App.scala:78) ~[scala-library-2.12.10.jar:na]
+	at Parser$.main(Parser.scala:8) ~[classes/:na]
+	at Parser.main(Parser.scala) ~[classes/:na]
+Caused by: java.lang.IllegalStateException: Could not evaluate condition on org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PoolConfiguration due to io/r2dbc/spi/ValidationDepth not found. Make sure your own configuration does not rely on that class. This can also happen if you are @ComponentScanning a springframework package (e.g. if you put a @ComponentScan in the default package by mistake)
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:54) ~[spring-boot-autoconfigure-3.3.11.jar:3.3.11]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:108) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:88) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ConditionEvaluator.shouldSkip(ConditionEvaluator.java:71) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isConditionMatch(ClassPathScanningCandidateComponentProvider.java:564) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.isCandidateComponent(ClassPathScanningCandidateComponentProvider.java:547) ~[spring-context-6.1.19.jar:6.1.19]
+	at org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider.scanCandidateComponents(ClassPathScanningCandidateComponentProvider.java:471) ~[spring-context-6.1.19.jar:6.1.19]
+	... 30 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: io/r2dbc/spi/ValidationDepth
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3297) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredField(Class.java:2608) ~[na:na]
+	at org.springframework.boot.context.properties.bind.DefaultBindConstructorProvider$Constructors.isInnerClass(DefaultBindConstructorProvider.java:144) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.DefaultBindConstructorProvider$Constructors.getCandidateConstructors(DefaultBindConstructorProvider.java:134) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.DefaultBindConstructorProvider$Constructors.getConstructors(DefaultBindConstructorProvider.java:103) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.DefaultBindConstructorProvider.getBindConstructor(DefaultBindConstructorProvider.java:42) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.ValueObjectBinder$ValueObject.get(ValueObjectBinder.java:213) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.ValueObjectBinder.bind(ValueObjectBinder.java:76) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindDataObject$6(Binder.java:480) ~[spring-boot-3.3.11.jar:3.3.11]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[na:na]
+	at java.base/java.util.AbstractList$RandomAccessSpliterator.tryAdvance(AbstractList.java:706) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.forEachWithCancel(ReferencePipeline.java:129) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyIntoWithCancel(AbstractPipeline.java:527) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:513) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[na:na]
+	at java.base/java.util.stream.FindOps$FindOp.evaluateSequential(FindOps.java:150) ~[na:na]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[na:na]
+	at java.base/java.util.stream.ReferencePipeline.findFirst(ReferencePipeline.java:647) ~[na:na]
+	at org.springframework.boot.context.properties.bind.Binder.fromDataObjectBinders(Binder.java:488) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.lambda$bindDataObject$7(Binder.java:479) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withIncreasedDepth(Binder.java:597) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder$Context.withDataObject(Binder.java:583) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bindDataObject(Binder.java:479) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bindObject(Binder.java:418) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:350) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:339) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:269) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.context.properties.bind.Binder.bind(Binder.java:230) ~[spring-boot-3.3.11.jar:3.3.11]
+	at org.springframework.boot.autoconfigure.r2dbc.ConnectionFactoryConfigurations$PooledConnectionFactoryCondition.getMatchOutcome(ConnectionFactoryConfigurations.java:155) ~[spring-boot-autoconfigure-3.3.11.jar:3.3.11]
+	at org.springframework.boot.autoconfigure.condition.SpringBootCondition.matches(SpringBootCondition.java:47) ~[spring-boot-autoconfigure-3.3.11.jar:3.3.11]
+	... 36 common frames omitted
+Caused by: java.lang.ClassNotFoundException: io.r2dbc.spi.ValidationDepth
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525) ~[na:na]
+	... 67 common frames omitted
+
+2025-08-29T16:01:10.224-04:00  INFO 26045 --- [main] scala.App                                : Starting App using Java 17.0.16 with PID 26045 (/Users/tilakkumar/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar started by tilakkumar in /Users/tilakkumar/Desktop/Spark Learning/parser)
+2025-08-29T16:01:10.228-04:00  INFO 26045 --- [main] scala.App                                : No active profile set, falling back to 1 default profile: "default"
+2025-08-29T16:01:10.949-04:00  INFO 26045 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-29T16:01:10.980-04:00  INFO 26045 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17 ms. Found 0 JPA repository interfaces.
+2025-08-29T16:01:11.512-04:00  INFO 26045 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7878 (http)
+2025-08-29T16:01:11.531-04:00  INFO 26045 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-29T16:01:11.531-04:00  INFO 26045 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-08-29T16:01:11.610-04:00  INFO 26045 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-29T16:01:11.611-04:00  INFO 26045 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1331 ms
+2025-08-29T16:01:11.719-04:00  WARN 26045 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-08-29T16:01:11.725-04:00  INFO 26045 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-08-29T16:01:11.742-04:00  INFO 26045 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-29T16:01:11.771-04:00 ERROR 26045 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-08-29T16:02:27.358-04:00  INFO 26357 --- [main] scala.App                                : Starting App using Java 17.0.16 with PID 26357 (/Users/tilakkumar/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar started by tilakkumar in /Users/tilakkumar/Desktop/Spark Learning/parser)
+2025-08-29T16:02:27.361-04:00  INFO 26357 --- [main] scala.App                                : No active profile set, falling back to 1 default profile: "default"
+2025-08-29T16:02:28.092-04:00  INFO 26357 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-29T16:02:28.122-04:00  INFO 26357 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 JPA repository interfaces.
+2025-08-29T16:02:28.705-04:00  INFO 26357 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7878 (http)
+2025-08-29T16:02:28.717-04:00  INFO 26357 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-29T16:02:28.718-04:00  INFO 26357 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-08-29T16:02:28.776-04:00  INFO 26357 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-29T16:02:28.777-04:00  INFO 26357 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1354 ms
+2025-08-29T16:02:28.835-04:00  WARN 26357 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-08-29T16:02:28.838-04:00  INFO 26357 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-08-29T16:02:28.848-04:00  INFO 26357 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-29T16:02:28.862-04:00 ERROR 26357 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-08-29T16:04:11.573-04:00  INFO 26753 --- [main] scala.App                                : Starting App using Java 17.0.16 with PID 26753 (/Users/tilakkumar/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar started by tilakkumar in /Users/tilakkumar/Desktop/Spark Learning/parser)
+2025-08-29T16:04:11.577-04:00  INFO 26753 --- [main] scala.App                                : No active profile set, falling back to 1 default profile: "default"
+2025-08-29T16:04:12.352-04:00  INFO 26753 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-29T16:04:12.396-04:00  INFO 26753 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 0 JPA repository interfaces.
+2025-08-29T16:04:13.001-04:00  INFO 26753 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7878 (http)
+2025-08-29T16:04:13.016-04:00  INFO 26753 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-29T16:04:13.016-04:00  INFO 26753 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-08-29T16:04:13.074-04:00  INFO 26753 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-29T16:04:13.075-04:00  INFO 26753 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1447 ms
+2025-08-29T16:04:13.140-04:00  WARN 26753 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-08-29T16:04:13.143-04:00  INFO 26753 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-08-29T16:04:13.157-04:00  INFO 26753 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-29T16:04:13.177-04:00 ERROR 26753 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-08-29T16:05:30.373-04:00  INFO 27090 --- [main] scala.App                                : Starting App using Java 17.0.16 with PID 27090 (/Users/tilakkumar/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar started by tilakkumar in /Users/tilakkumar/Desktop/Spark Learning/parser)
+2025-08-29T16:05:30.378-04:00  INFO 27090 --- [main] scala.App                                : No active profile set, falling back to 1 default profile: "default"
+2025-08-29T16:05:31.794-04:00  INFO 27090 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7878 (http)
+2025-08-29T16:05:31.807-04:00  INFO 27090 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-29T16:05:31.807-04:00  INFO 27090 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-08-29T16:05:31.880-04:00  INFO 27090 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-29T16:05:31.881-04:00  INFO 27090 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1418 ms
+2025-08-29T16:05:31.934-04:00  WARN 27090 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'condition' defined in file [/Users/tilakkumar/Desktop/Spark Learning/parser/target/classes/com/learn/parser/config/Condition.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'java.lang.String' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2025-08-29T16:05:31.937-04:00  INFO 27090 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-08-29T16:05:31.949-04:00  INFO 27090 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-29T16:05:31.967-04:00 ERROR 27090 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Condition is annotated with @ConstructorBinding but it is defined as a regular bean which caused dependency injection to fail.
+
+Action:
+
+Update your configuration so that Condition is defined via @ConfigurationPropertiesScan or @EnableConfigurationProperties.
+
+2025-08-29T16:08:46.569-04:00  INFO 27833 --- [main] scala.App                                : Starting App using Java 17.0.16 with PID 27833 (/Users/tilakkumar/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar started by tilakkumar in /Users/tilakkumar/Desktop/Spark Learning/parser)
+2025-08-29T16:08:46.573-04:00  INFO 27833 --- [main] scala.App                                : No active profile set, falling back to 1 default profile: "default"
+2025-08-29T16:08:47.781-04:00  INFO 27833 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7878 (http)
+2025-08-29T16:08:47.793-04:00  INFO 27833 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-29T16:08:47.793-04:00  INFO 27833 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-08-29T16:08:47.851-04:00  INFO 27833 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-29T16:08:47.851-04:00  INFO 27833 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1213 ms
+2025-08-29T16:08:47.909-04:00  INFO 27833 --- [main] com.learn.parser.service.ParserService   : Available mappers at the startup
+2025-08-29T16:08:47.910-04:00  INFO 27833 --- [main] com.learn.parser.service.ParserService   : Intializaing ParserService with 0 mappers
+2025-08-29T16:08:48.214-04:00  INFO 27833 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7878 (http) with context path '/'
+2025-08-29T16:08:48.223-04:00  INFO 27833 --- [main] scala.App                                : Started App in 2.314 seconds (process running for 2.976)
+2025-08-29T16:17:39.668-04:00  INFO 29879 --- [main] scala.App                                : Starting App using Java 17.0.16 with PID 29879 (/Users/tilakkumar/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar started by tilakkumar in /Users/tilakkumar/Desktop/Spark Learning/parser)
+2025-08-29T16:17:39.672-04:00  INFO 29879 --- [main] scala.App                                : No active profile set, falling back to 1 default profile: "default"
+2025-08-29T16:17:40.842-04:00  INFO 29879 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7878 (http)
+2025-08-29T16:17:40.859-04:00  INFO 29879 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-29T16:17:40.860-04:00  INFO 29879 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-08-29T16:17:40.989-04:00  INFO 29879 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-29T16:17:40.990-04:00  INFO 29879 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1245 ms
+2025-08-29T16:17:41.063-04:00  INFO 29879 --- [main] com.learn.parser.service.ParserService   : Available mappers at the startup
+2025-08-29T16:17:41.063-04:00  INFO 29879 --- [main] com.learn.parser.service.ParserService   : Intializaing ParserService with 0 mappers
+2025-08-29T16:17:41.378-04:00  INFO 29879 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7878 (http) with context path '/'
+2025-08-29T16:17:41.386-04:00  INFO 29879 --- [main] scala.App                                : Started App in 2.214 seconds (process running for 2.81)
+2025-08-29T16:17:47.468-04:00  INFO 29879 --- [http-nio-7878-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-29T16:17:47.468-04:00  INFO 29879 --- [http-nio-7878-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-29T16:17:47.469-04:00  INFO 29879 --- [http-nio-7878-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-29T16:25:04.940-04:00  INFO 31583 --- [main] scala.App                                : Starting App using Java 17.0.16 with PID 31583 (/Users/tilakkumar/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar started by tilakkumar in /Users/tilakkumar/Desktop/Spark Learning/parser)
+2025-08-29T16:25:04.944-04:00  INFO 31583 --- [main] scala.App                                : No active profile set, falling back to 1 default profile: "default"
+2025-08-29T16:25:06.000-04:00  INFO 31583 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7878 (http)
+2025-08-29T16:25:06.012-04:00  INFO 31583 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-29T16:25:06.012-04:00  INFO 31583 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-08-29T16:25:06.072-04:00  INFO 31583 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-29T16:25:06.072-04:00  INFO 31583 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1072 ms
+2025-08-29T16:25:06.176-04:00  INFO 31583 --- [main] com.learn.parser.service.ParserService   : Available mappers at the startup
+2025-08-29T16:25:06.177-04:00  INFO 31583 --- [main] com.learn.parser.service.ParserService   : Intializaing ParserService with 0 mappers
+2025-08-29T16:25:06.525-04:00  INFO 31583 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7878 (http) with context path '/'
+2025-08-29T16:25:06.533-04:00  INFO 31583 --- [main] scala.App                                : Started App in 2.268 seconds (process running for 2.93)
+2025-08-29T16:25:13.962-04:00  INFO 31583 --- [http-nio-7878-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-08-29T16:25:13.963-04:00  INFO 31583 --- [http-nio-7878-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-08-29T16:25:13.964-04:00  INFO 31583 --- [http-nio-7878-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-08-29T16:26:11.354-04:00  INFO 31846 --- [main] scala.App                                : Starting App using Java 17.0.16 with PID 31846 (/Users/tilakkumar/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar started by tilakkumar in /Users/tilakkumar/Desktop/Spark Learning/parser)
+2025-08-29T16:26:11.356-04:00  INFO 31846 --- [main] scala.App                                : No active profile set, falling back to 1 default profile: "default"
+2025-08-29T16:26:11.971-04:00  INFO 31846 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-29T16:26:11.991-04:00  INFO 31846 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 0 JPA repository interfaces.
+2025-08-29T16:26:12.586-04:00  INFO 31846 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7878 (http)
+2025-08-29T16:26:12.610-04:00  INFO 31846 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-29T16:26:12.611-04:00  INFO 31846 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-08-29T16:26:12.698-04:00  INFO 31846 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-29T16:26:12.699-04:00  INFO 31846 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1300 ms
+2025-08-29T16:26:12.760-04:00  WARN 31846 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-08-29T16:26:12.762-04:00  INFO 31846 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-08-29T16:26:12.774-04:00  INFO 31846 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-29T16:26:12.790-04:00 ERROR 31846 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2025-08-29T16:26:50.712-04:00  INFO 32008 --- [main] scala.App                                : Starting App using Java 17.0.16 with PID 32008 (/Users/tilakkumar/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar started by tilakkumar in /Users/tilakkumar/Desktop/Spark Learning/parser)
+2025-08-29T16:26:50.716-04:00  INFO 32008 --- [main] scala.App                                : No active profile set, falling back to 1 default profile: "default"
+2025-08-29T16:26:51.757-04:00  INFO 32008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7878 (http)
+2025-08-29T16:26:51.768-04:00  INFO 32008 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-29T16:26:51.768-04:00  INFO 32008 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-08-29T16:26:51.829-04:00  INFO 32008 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-29T16:26:51.830-04:00  INFO 32008 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1060 ms
+2025-08-29T16:26:51.917-04:00  INFO 32008 --- [main] com.learn.parser.service.ParserService   : Available mappers at the startup
+2025-08-29T16:26:51.920-04:00  INFO 32008 --- [main] com.learn.parser.service.ParserService   : Intializaing ParserService with 0 mappers
+2025-08-29T16:26:52.281-04:00  INFO 32008 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7878 (http) with context path '/'
+2025-08-29T16:26:52.291-04:00  INFO 32008 --- [main] scala.App                                : Started App in 1.987 seconds (process running for 2.423)
+2025-08-29T16:40:22.400-04:00  INFO 35095 --- [main] scala.App                                : Starting App using Java 17.0.16 with PID 35095 (/Users/tilakkumar/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.10.jar started by tilakkumar in /Users/tilakkumar/Desktop/Spark Learning/parser)
+2025-08-29T16:40:22.405-04:00  INFO 35095 --- [main] scala.App                                : No active profile set, falling back to 1 default profile: "default"
+2025-08-29T16:40:24.129-04:00  INFO 35095 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 7878 (http)
+2025-08-29T16:40:24.143-04:00  INFO 35095 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-08-29T16:40:24.144-04:00  INFO 35095 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-08-29T16:40:24.214-04:00  INFO 35095 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-08-29T16:40:24.215-04:00  INFO 35095 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1689 ms
+2025-08-29T16:40:24.286-04:00  INFO 35095 --- [main] com.learn.parser.service.ParserService   : Available mappers at the startup
+2025-08-29T16:40:24.286-04:00  INFO 35095 --- [main] com.learn.parser.service.ParserService   : Mapper id: visa, class: VisaDebitJsonMapper
+2025-08-29T16:40:24.286-04:00  INFO 35095 --- [main] com.learn.parser.service.ParserService   : Intializaing ParserService with 1 mappers
+2025-08-29T16:40:24.287-04:00  INFO 35095 --- [main] com.learn.parser.service.ParserService   : Registering mapper with id: visa
+2025-08-29T16:40:24.629-04:00  INFO 35095 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 7878 (http) with context path '/'
+2025-08-29T16:40:24.639-04:00  INFO 35095 --- [main] scala.App                                : Started App in 2.654 seconds (process running for 3.194)
